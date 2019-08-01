@@ -1,0 +1,27 @@
+﻿@page "/"
+@inject Sotsera.Blazor.Toaster.IToaster Toaster
+@inject ITest Test;
+@using  ToasterTest.Shared;
+
+<h1>Hello, Toaster Test</h1>
+
+Welcome to your new app.
+
+The Test Class is not displaying the Toaster messages.
+
+
+
+
+@code{
+
+    
+
+    protected override async Task OnInitAsync()
+    {
+        Toaster.Warning("Before"); 
+        Test.Info(Toaster); // This Does not work
+        Toaster.Success("After");
+    }
+
+
+}
