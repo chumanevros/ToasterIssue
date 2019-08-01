@@ -23,9 +23,9 @@ namespace ToasterTest.Shared
 
         public void Info(Sotsera.Blazor.Toaster.IToaster Toaster)
         {
-            // Console.WriteLine("Toaster:" + _Toaster.ToString());
-            _Toaster.Info("Inside a class with async Info Toaster"); 
-            Toaster.Error(" Inside a class with async Error Toaster");
+            // Console.WriteLine("Toaster:" + _Toaster.ToString()); // This shouws Toaster is initialized
+            _Toaster.Info("This Toaster does not display"); 
+            Toaster.Error("This Toaster is displaying");
         }
     }
 }

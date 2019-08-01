@@ -18,9 +18,10 @@ The Test Class is not displaying the Toaster messages.
 
     protected override async Task OnInitAsync()
     {
-        Toaster.Warning("Before"); 
-        Test.Info(Toaster); // This Does not work
-        Toaster.Success("After");
+        Toaster.Warning("Before - This works"); 
+        Test.Info(Toaster); // Passing the Toaster works, The dependecy injected version does not.
+        // I also used an async Task and it also does not work.
+        Toaster.Success("After - this Works");
     }
 
 
